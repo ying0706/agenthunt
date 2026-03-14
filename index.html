@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 移动端立即注入样式，防止 CDN 缓存导致旧版 CSS 生效 -->
+  <script>if(window.innerWidth<901){document.write('<style>.sidebar{display:none!important}.main{display:block!important}.nav-search{display:none!important}.hero-actions{flex-direction:column!important}</style>');}</script>
   <title>AgentHunt · 每天发现好用的 Agent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

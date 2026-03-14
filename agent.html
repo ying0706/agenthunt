@@ -448,9 +448,34 @@
 
     /* ─── RESPONSIVE ──────────── */
     @media (max-width: 768px) {
-      .page-body { grid-template-columns: 1fr; }
+      /* Nav */
+      .nav-inner { padding: 0 16px; gap: 8px; }
+      .breadcrumb { font-size: 12px; }
+      #navActions { gap: 6px; }
+      #navActions button { padding: 6px 10px; font-size: 12px; }
+
+      /* Hero banner */
+      .detail-hero { padding: 20px 16px 24px; }
+      .detail-hero-inner { padding: 0; }
+      .detail-hero-top { flex-wrap: wrap; gap: 12px; }
       .detail-name { font-size: 22px; }
+      .detail-hero-actions { gap: 8px; }
+      .detail-hero-actions .btn-vote { min-width: unset; }
+
+      /* Main layout: single column */
+      .page-body { grid-template-columns: 1fr; padding: 16px; gap: 20px; }
+
+      /* Move sidebar above (it naturally appears after main, so just let it stack) */
+      .sidebar { order: 2; }
+
+      /* Screenshots */
       .screenshot-item { width: 220px; height: 130px; }
+
+      /* Use cases grid → single column */
+      #useCases { grid-template-columns: 1fr !important; }
+
+      /* Footer */
+      footer { padding: 20px 16px; }
     }
   </style>
 </head>

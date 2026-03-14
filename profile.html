@@ -169,7 +169,35 @@
     footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;font-size:12px;color:var(--text-3);margin-top:12px}
     footer a{color:var(--brand)}
 
-    @media(max-width:768px){.profile-body{grid-template-columns:1fr}.profile-actions{display:none}}
+    @media(max-width:768px){
+      /* Nav */
+      .nav-inner{padding:0 16px;gap:10px}
+      #navActions button{padding:6px 10px;font-size:12px}
+
+      /* Profile hero */
+      .profile-hero{padding:28px 16px 0}
+      .profile-top{flex-wrap:wrap;gap:16px}
+      .profile-avatar{width:72px;height:72px;font-size:28px}
+      .profile-name{font-size:22px}
+      .profile-actions{flex-wrap:wrap;gap:6px;margin-top:8px}
+      .profile-actions .btn-edit{padding:7px 14px;font-size:12px}
+      .profile-stats{flex-wrap:wrap}
+      .profile-stat{min-width:33%}
+
+      /* Body: single column, hide sidebar */
+      .profile-body{grid-template-columns:1fr;padding:16px;gap:20px}
+      .profile-sidebar{display:none}
+
+      /* Tabs */
+      .profile-tabs{flex-wrap:wrap;gap:4px}
+      .profile-tab{padding:7px 12px;font-size:13px}
+
+      /* Cards grid */
+      .cards-grid{grid-template-columns:1fr}
+
+      /* Footer */
+      footer{padding:20px 16px}
+    }
   </style>
 </head>
 <body>

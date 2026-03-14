@@ -472,37 +472,37 @@
     }
     footer a { color: var(--brand); }
 
-    /* ─── RESPONSIVE (mobile ≤ 768px) ──────── */
-    @media (max-width: 768px) {
+    /* ─── RESPONSIVE (mobile ≤ 900px) ──────── */
+    @media (max-width: 900px) {
       /* Nav */
-      .nav-inner { padding: 0 16px; gap: 10px; }
-      .nav-search { display: none; }
-      #navActions { gap: 6px; }
-      #navActions button { padding: 6px 10px; font-size: 12px; }
+      .nav-inner { padding: 0 16px !important; gap: 10px !important; }
+      .nav-search { display: none !important; }
+      #navActions { gap: 6px !important; }
+      #navActions button { padding: 6px 10px !important; font-size: 12px !important; }
 
       /* Hero */
-      .hero { padding: 32px 20px 28px; }
-      .hero h1 { font-size: 24px; }
-      .hero p { font-size: 13px; }
-      .hero-actions { flex-direction: column; align-items: center; gap: 8px; }
-      .btn-hero-primary, .btn-hero-ghost { width: 100%; max-width: 280px; text-align: center; }
-      .hero-stats { gap: 24px; }
-      .hero-stat strong { font-size: 18px; }
+      .hero { padding: 32px 20px 28px !important; }
+      .hero h1 { font-size: 24px !important; }
+      .hero p { font-size: 13px !important; }
+      .hero-actions { flex-direction: column !important; align-items: center !important; gap: 8px !important; }
+      .btn-hero-primary, .btn-hero-ghost { width: 100% !important; max-width: 280px !important; text-align: center !important; }
+      .hero-stats { gap: 24px !important; }
+      .hero-stat strong { font-size: 18px !important; }
 
       /* Main layout: single column, hide sidebar */
-      .main { grid-template-columns: 1fr; padding: 16px; gap: 20px; }
-      .sidebar { display: none; }
+      .main { grid-template-columns: 1fr !important; padding: 16px !important; gap: 20px !important; }
+      .sidebar { display: none !important; }
 
       /* Feed header */
-      .feed-header { flex-wrap: wrap; gap: 8px; }
-      .tabs { gap: 4px; }
-      .tab { padding: 6px 10px; font-size: 12px; }
+      .feed-header { flex-wrap: wrap !important; gap: 8px !important; }
+      .tabs { gap: 4px !important; }
+      .tab { padding: 6px 10px !important; font-size: 12px !important; }
 
       /* Agent cards */
-      .agent-card { padding: 14px; }
+      .agent-card { padding: 14px !important; }
 
       /* Footer */
-      footer { padding: 20px 16px; }
+      footer { padding: 20px 16px !important; }
     }
   </style>
 </head>
@@ -1098,6 +1098,13 @@ document.addEventListener('keydown', e => {
   renderFeed();
   renderTrending();
   updateStats();
+  // 移动端：强制单列布局
+  if (window.innerWidth <= 900) {
+    const main = document.querySelector('.main');
+    const sidebar = document.querySelector('.sidebar');
+    if (main) main.style.gridTemplateColumns = '1fr';
+    if (sidebar) sidebar.style.display = 'none';
+  }
 })();
 </script>
 </body>

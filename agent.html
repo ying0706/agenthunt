@@ -447,35 +447,35 @@
     footer a { color: var(--brand); }
 
     /* ─── RESPONSIVE ──────────── */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       /* Nav */
-      .nav-inner { padding: 0 16px; gap: 8px; }
-      .breadcrumb { font-size: 12px; }
-      #navActions { gap: 6px; }
-      #navActions button { padding: 6px 10px; font-size: 12px; }
+      .nav-inner { padding: 0 16px !important; gap: 8px !important; }
+      .breadcrumb { font-size: 12px !important; }
+      #navActions { gap: 6px !important; }
+      #navActions button { padding: 6px 10px !important; font-size: 12px !important; }
 
       /* Hero banner */
-      .detail-hero { padding: 20px 16px 24px; }
-      .detail-hero-inner { padding: 0; }
-      .detail-hero-top { flex-wrap: wrap; gap: 12px; }
-      .detail-name { font-size: 22px; }
-      .detail-hero-actions { gap: 8px; }
-      .detail-hero-actions .btn-vote { min-width: unset; }
+      .detail-hero { padding: 20px 16px 24px !important; }
+      .detail-hero-inner { padding: 0 !important; }
+      .detail-hero-top { flex-wrap: wrap !important; gap: 12px !important; }
+      .detail-name { font-size: 22px !important; }
+      .detail-hero-actions { gap: 8px !important; }
+      .detail-hero-actions .btn-vote { min-width: unset !important; }
 
       /* Main layout: single column */
-      .page-body { grid-template-columns: 1fr; padding: 16px; gap: 20px; }
+      .page-body { grid-template-columns: 1fr !important; padding: 16px !important; gap: 20px !important; }
 
-      /* Move sidebar above (it naturally appears after main, so just let it stack) */
-      .sidebar { order: 2; }
+      /* Sidebar stacks below */
+      .sidebar { order: 2 !important; }
 
       /* Screenshots */
-      .screenshot-item { width: 220px; height: 130px; }
+      .screenshot-item { width: 220px !important; height: 130px !important; }
 
       /* Use cases grid → single column */
       #useCases { grid-template-columns: 1fr !important; }
 
       /* Footer */
-      footer { padding: 20px 16px; }
+      footer { padding: 20px 16px !important; }
     }
   </style>
 </head>

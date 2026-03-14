@@ -1,0 +1,4 @@
+test.py
+test_fast.py
+*.pyc
+.DS_Store
